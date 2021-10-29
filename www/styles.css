@@ -1,0 +1,31 @@
+/*
+Arya Kondur
+October 2021
+
+CSS styles used for front-end.
+*/
+
+body {
+  background-color: #FFC6C6;
+}
+
+#app-title {
+  text-align: center;
+  color: green;
+  font-size: 30px;
+  font-family: 'Times New Roman';
+  font-weight: bold;
+}
+
+#sidebar-title {
+  text-align: center;
+  color: green;
+  font-family: 'Times New Roman';
+}
+
+#main-title {
+  text-align: center;
+  color: green;
+  font-family: 'Times New Roman';
+  font-style: italic;
+}
