@@ -5,6 +5,8 @@
 
 library(shiny)
 
+values <- state.name
+
 ui <- fluidPage(
   
   tags$head(
@@ -18,12 +20,17 @@ ui <- fluidPage(
   
   sidebarLayout(
     sidebarPanel(
-      h4(id = "sidebar-title", "Choose a state to analyze:"),
-      selectInput("state_choices", "", choices = list('A', 'B'))
+      h4(id = "sidebar-title", "Parameters for Analysis"),
+      selectInput("state_choice", "Choose a state:", choices = values),
+      numericInput("num_tweets", "Number of tweets:", 10, min = 10, max = 500),
+      plotOutput("state_map"),
+      width = 5
     ),
     mainPanel(
       h4(id = "main-title", "\nHistogram analysis"),
-      textOutput("state_name")
+      textOutput("state_name"),
+      textOutput("number_tweets"),
+      width = 7
     )
   )
 )
